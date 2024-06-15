@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:ninja_trips/models/Trip.dart';
 import 'package:ninja_trips/shared/heart.dart';
-import 'package:lipsum/lipsum.dart' as lipsum;
+import 'package:lorem_ipsum_generator/lorem_ipsum_generator.dart';
 
 class Details extends StatelessWidget {
 
   final Trip trip;
-  Details({ @required this.trip });
+  Details({ required this.trip });
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class Details extends StatelessWidget {
             Padding(
               padding: EdgeInsets.all(18),
               child: Text(
-                lipsum.createText(numParagraphs: 1, numSentences: 3),
+                LoremIpsumGenerator.generate(paragraphs: 1, wordsPerParagraph: 3),
                 style: TextStyle(
                   color: Colors.grey[600],
                   height: 1.4
